@@ -67,8 +67,8 @@ char **_get_paths(node_t *head)
 	return (path);
 }
 
-/*
- * _token_count - counts number of tokens
+/**
+ *_token_count - counts number of tokens ...
  *
  *@str:string to token count
  *@del: separator || delimeter

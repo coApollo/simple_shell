@@ -25,7 +25,7 @@ int _prompt(char **buf, size_t *bytes_read)
 	{
 		if ((*buf)[actual_bytes_read - 1] == '\n')
 		{
-		    (*buf)[actual_bytes_read - 1] = '\0';
+			(*buf)[actual_bytes_read - 1] = '\0';
 		}
 		return (EXIT_SUCCESS);
 	}
