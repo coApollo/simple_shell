@@ -39,3 +39,30 @@ void handle_sigint(int signum __attribute__((unused)))
 	_signal_ = CTRL_C_SIGNAL_CODE;
 	write(1, "\n$ ", 3);
 }
+
+
+/**
+ * _atoi - Converts a string to an integer.
+ *
+ * @str: The string to be converted to an integer
+ * Return: The converted integer
+ */
+int _atoi(char *str)
+{
+	int result = 0;
+	int sign = 1;
+	int i = 0;
+
+	if (str[0] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+
+	while (str[i] != '\0')
+	{
+		result = result * 10 + str[i] - '0';
+		++i;
+	}
+	return (sign * result);
+}

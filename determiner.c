@@ -62,15 +62,19 @@ int _is_exec(char *path)
 void _is_exit(char **args, char *buf, char **envpath,
 int _signal_, char **env_clone)
 {
-
 	node_t *head = NULL;
 	int i;
 
 	if (args[0] == NULL)
 		return;
 
-	if (EXIT)
+	if (_strcmp(args[0], "exit") == 0)
 	{
+		if (args[1] != NULL)
+		{
+			_signal_ = _atoi(args[1]);
+		}
+
 		_free_str(buf);
 		_free_(args);
 
@@ -86,6 +90,11 @@ int _signal_, char **env_clone)
 		_free_(env_clone);
 
 		free_list(head);
+
+		print_number(_signal_);
+		_putchar('\n', 1);
+
 		exit(_signal_);
 	}
 }
+

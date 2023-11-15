@@ -83,6 +83,7 @@ char *_make_path(int argc, ...);
 void _putchar(char ch, int file_descriptor);
 void print_number(int number);
 void _printerror(int commands_executed, int arg_count, ...);
+int _atoi(char *str);
 void _print_str(char *str);
 char *_strdup(char *str);
 int _strcmp(char *s1, char *s2);
