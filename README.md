@@ -6,7 +6,7 @@ It is written in C.The shell supports executing commands, managing environment v
 
 ## Usage 
 
-To run this shell
+To run this shell.
 
  1. clone the repository [here](https://github.com/coApollo/simple_shell.git
 "clone simple shell")
